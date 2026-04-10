@@ -1,18 +1,28 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
-import { getWork, categoryLabels } from '@/data/works';
+import { useWork, categoryLabels } from '@/hooks/useWorks';
 import { WorkSidebar } from '@/components/WorkSidebar';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Loader2 } from 'lucide-react';
 
 const WorkDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const work = id ? getWork(id) : undefined;
+  const { data: work, isLoading } = useWork(id);
+
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className="flex items-center justify-center py-24">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      </Layout>
+    );
+  }
 
   if (!work) {
     return <Navigate to="/" replace />;
   }
 
-  const formattedDate = new Date(work.date).toLocaleDateString('en-US', {
+  const formattedDate = new Date(work.created_at).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

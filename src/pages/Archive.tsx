@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { Layout } from '@/components/Layout';
 import { WorkCard } from '@/components/WorkCard';
-import { works, categoryLabels, Category } from '@/data/works';
+import { useWorks, categoryLabels, Category } from '@/hooks/useWorks';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Calendar, Filter, Grid, List } from 'lucide-react';
+import { Search, Calendar, Filter, Grid, List, Loader2 } from 'lucide-react';
 
 const Archive = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -12,7 +12,10 @@ const Archive = () => {
   const [sortBy, setSortBy] = useState<'date' | 'title'>('date');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+  const { data: works = [], isLoading } = useWorks();
+
   const filteredWorks = useMemo(() => {
+    if (!works) return [];
     let result = [...works];
 
     // Filter by search
@@ -33,13 +36,13 @@ const Archive = () => {
 
     // Sort
     if (sortBy === 'date') {
-      result.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      result.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
     } else {
       result.sort((a, b) => a.title.localeCompare(b.title));
     }
 
     return result;
-  }, [searchQuery, selectedCategory, sortBy]);
+  }, [works, searchQuery, selectedCategory, sortBy]);
 
   const categories: (Category | 'all')[] = ['all', 'poetry', 'short-stories', 'prose', 'novels'];
 
@@ -131,13 +134,16 @@ const Archive = () => {
 
         </div>
 
-        {/* Results */}
         <div className="mt-8">
           <p className="mb-6 text-sm text-muted-foreground">
             Showing {filteredWorks.length} of {works.length} works
           </p>
 
-          {filteredWorks.length > 0 ? (
+          {isLoading ? (
+            <div className="flex justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+            </div>
+          ) : filteredWorks.length > 0 ? (
             <div
               className={
                 viewMode === 'grid'

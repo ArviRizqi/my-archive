@@ -3,7 +3,7 @@ import { Layout } from '@/components/Layout';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserFavorites } from '@/hooks/useUserFavorites';
 import { useReadingProgress } from '@/hooks/useReadingProgress';
-import { getWork, works } from '@/data/works';
+import { useWorks, Work } from '@/hooks/useWorks';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -19,12 +19,13 @@ const Profile = () => {
   const { user, profile, loading, updateProfile } = useAuth();
   const { favorites } = useUserFavorites();
   const { progressMap, getCompletedCount } = useReadingProgress();
+  const { data: works = [], isLoading: worksLoading } = useWorks();
   
   const [displayName, setDisplayName] = useState(profile?.display_name || '');
   const [bio, setBio] = useState(profile?.bio || '');
   const [updating, setUpdating] = useState(false);
 
-  if (loading) {
+  if (loading || worksLoading) {
     return (
       <Layout>
         <div className="flex items-center justify-center py-24">
@@ -52,7 +53,9 @@ const Profile = () => {
     setUpdating(false);
   };
 
-  const favoriteWorks = favorites.map(id => getWork(id)).filter(Boolean);
+  const getWork = (id: string) => works.find(w => w.id === id);
+
+  const favoriteWorks = favorites.map(id => getWork(id)).filter(Boolean) as Work[];
   const readingStats = Object.values(progressMap);
   const completedCount = getCompletedCount();
   const inProgressCount = readingStats.filter(p => !p.completed && p.progress > 0).length;

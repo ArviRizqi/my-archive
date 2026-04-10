@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Work, categoryLabels } from '@/data/works';
+import { Work, categoryLabels, Category } from '@/hooks/useWorks';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -10,7 +10,7 @@ interface WorkCardProps {
 }
 
 export const WorkCard = ({ work, showCategory = false, variant = 'vertical' }: WorkCardProps) => {
-  const formattedDate = new Date(work.date).toLocaleDateString('en-US', {
+  const formattedDate = new Date(work.created_at).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

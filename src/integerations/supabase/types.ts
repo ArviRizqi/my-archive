@@ -101,6 +101,8 @@ export type Database = {
           id: string
           updated_at: string
           user_id: string
+          user_roles?: string | null
+          email?: string | null
         }
         Insert: {
           avatar_url?: string | null

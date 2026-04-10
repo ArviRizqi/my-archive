@@ -1,7 +1,8 @@
 import { Layout } from '@/components/Layout';
 import { WorkCard } from '@/components/WorkCard';
 import { FavoritesSidebar } from '@/components/FavoritesSidebar';
-import { getCategoryWorks, categoryLabels, Category } from '@/data/works';
+import { useCategoryWorks, categoryLabels, Category } from '@/hooks/useWorks';
+import { Loader2 } from 'lucide-react';
 
 interface CategoryPageProps {
   category: Category;
@@ -15,7 +16,7 @@ const categoryDescriptions: Record<Category, string> = {
 };
 
 export const CategoryPage = ({ category }: CategoryPageProps) => {
-  const works = getCategoryWorks(category);
+  const { data: works = [], isLoading } = useCategoryWorks(category);
   const title = categoryLabels[category];
   const description = categoryDescriptions[category];
 
@@ -41,7 +42,11 @@ export const CategoryPage = ({ category }: CategoryPageProps) => {
         <div className="flex gap-8">
           {/* Main Content */}
           <div className="min-w-0 flex-1">
-            {works.length > 0 ? (
+            {isLoading ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+              </div>
+            ) : works.length > 0 ? (
               <div className="grid gap-6 md:grid-cols-2">
                 {works.map((work, index) => (
                   <div

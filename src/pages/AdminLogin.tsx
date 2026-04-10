@@ -44,14 +44,21 @@ const AdminLogin = () => {
       // Check if user is admin after login
       const { data: userData } = await supabase.auth.getUser();
       if (userData.user) {
-        const { data: roleData } = await supabase
-          .from('user_roles')
-          .select('role')
-          .eq('user_id', userData.user.id)
-          .eq('role', 'admin')
+        const { data: roleData, error: roleError } = await supabase
+          .from('profiles')
+          .select('user_roles')
+          .eq('id', userData.user.id)
           .maybeSingle();
 
-        if (roleData) {
+        if (roleError) {
+          console.error("Database error when checking user role:", roleError);
+          toast({
+            title: 'Error checking role',
+            description: roleError.message,
+            variant: 'destructive',
+          });
+          await supabase.auth.signOut();
+        } else if (roleData && roleData.user_roles === 'admin') {
           toast({
             title: 'Welcome back!',
             description: 'You are now logged in as admin.',
@@ -60,7 +67,7 @@ const AdminLogin = () => {
         } else {
           toast({
             title: 'Access denied',
-            description: 'You do not have admin privileges.',
+            description: 'You do not have admin privileges. Please ensure your user account is assigned the admin role in the database.',
             variant: 'destructive',
           });
           await supabase.auth.signOut();

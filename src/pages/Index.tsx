@@ -1,12 +1,12 @@
 import { Layout } from '@/components/Layout';
 import { WorkCard } from '@/components/WorkCard';
 import { FavoritesSidebar } from '@/components/FavoritesSidebar';
-import { getFeaturedWorks } from '@/data/works';
-import { ArrowRight } from 'lucide-react';
+import { useFeaturedWorks } from '@/hooks/useWorks';
+import { ArrowRight, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const featuredWorks = getFeaturedWorks();
+  const { data: featuredWorks, isLoading } = useFeaturedWorks();
 
   return (
     <Layout>
@@ -64,7 +64,11 @@ const Index = () => {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {featuredWorks.map((work, index) => (
+              {isLoading ? (
+                <div className="col-span-2 flex justify-center py-12">
+                  <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                </div>
+              ) : featuredWorks?.map((work, index) => (
                 <div
                   key={work.id}
                   className="animate-fade-in-up"

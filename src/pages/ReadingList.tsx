@@ -2,7 +2,7 @@ import { Layout } from '@/components/Layout';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserFavorites } from '@/hooks/useUserFavorites';
 import { useReadingProgress } from '@/hooks/useReadingProgress';
-import { getWork, works } from '@/data/works';
+import { useWorks, Work } from '@/hooks/useWorks';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -14,8 +14,9 @@ const ReadingList = () => {
   const { user, loading: authLoading } = useAuth();
   const { favorites, loading: favLoading } = useUserFavorites();
   const { progressMap, isCompleted, getProgress } = useReadingProgress();
+  const { data: works = [], isLoading: worksLoading } = useWorks();
 
-  if (authLoading) {
+  if (authLoading || worksLoading) {
     return (
       <Layout>
         <div className="flex items-center justify-center py-24">
@@ -29,20 +30,22 @@ const ReadingList = () => {
     return <Navigate to="/login" replace />;
   }
 
-  const favoriteWorks = favorites.map(id => getWork(id)).filter(Boolean);
+  const getWork = (id: string) => works.find(w => w.id === id);
+
+  const favoriteWorks = favorites.map(id => getWork(id)).filter(Boolean) as Work[];
   const inProgressWorks = Object.entries(progressMap)
     .filter(([_, p]) => !p.completed && p.progress > 0)
     .map(([id]) => getWork(id))
-    .filter(Boolean);
+    .filter(Boolean) as Work[];
   const completedWorks = Object.entries(progressMap)
     .filter(([_, p]) => p.completed)
     .map(([id]) => getWork(id))
-    .filter(Boolean);
+    .filter(Boolean) as Work[];
   const notStartedWorks = works.filter(
     w => !progressMap[w.id] || progressMap[w.id].progress === 0
   );
 
-  const WorkListItem = ({ work, showProgress = false }: { work: typeof works[0]; showProgress?: boolean }) => (
+  const WorkListItem = ({ work, showProgress = false }: { work: Work; showProgress?: boolean }) => (
     <Link
       to={`/work/${work.id}`}
       className="flex items-center justify-between rounded-lg border border-border bg-card p-4 transition-all hover:border-primary"
