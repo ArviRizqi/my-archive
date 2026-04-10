@@ -1,0 +1,71 @@
+import { Layout } from '@/components/Layout';
+import { WorkCard } from '@/components/WorkCard';
+import { FavoritesSidebar } from '@/components/FavoritesSidebar';
+import { getCategoryWorks, categoryLabels, Category } from '@/data/works';
+
+interface CategoryPageProps {
+  category: Category;
+}
+
+const categoryDescriptions: Record<Category, string> = {
+  poetry: 'Verses that capture moments of stillness, wonder, and the quiet revelations of everyday life.',
+  'short-stories': 'Brief narratives that illuminate the human condition through carefully crafted scenes and characters.',
+  prose: 'Essays and reflections on writing, solitude, and the practice of paying attention.',
+  novels: 'Longer works exploring the territories of memory, identity, and belonging.',
+};
+
+export const CategoryPage = ({ category }: CategoryPageProps) => {
+  const works = getCategoryWorks(category);
+  const title = categoryLabels[category];
+  const description = categoryDescriptions[category];
+
+  return (
+    <Layout>
+      {/* Header */}
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="max-w-2xl">
+          <span className="text-xs font-medium uppercase tracking-widest text-primary">
+            Collection
+          </span>
+          <h1 className="mt-2 font-serif text-3xl font-semibold text-foreground md:text-4xl lg:text-5xl">
+            {title}
+          </h1>
+          <p className="mt-6 font-serif text-lg leading-relaxed text-literary">
+            {description}
+          </p>
+        </div>
+      </section>
+
+      {/* Works Grid with Sidebar */}
+      <section className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
+        <div className="flex gap-8">
+          {/* Main Content */}
+          <div className="min-w-0 flex-1">
+            {works.length > 0 ? (
+              <div className="grid gap-6 md:grid-cols-2">
+                {works.map((work, index) => (
+                  <div
+                    key={work.id}
+                    className="animate-fade-in-up"
+                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                  >
+                    <WorkCard work={work} />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-lg border border-border bg-card p-12 text-center">
+                <p className="text-muted-foreground">
+                  No works in this category yet. Check back soon.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Sticky Sidebar */}
+          <FavoritesSidebar />
+        </div>
+      </section>
+    </Layout>
+  );
+};
