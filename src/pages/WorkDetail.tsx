@@ -56,11 +56,15 @@ const WorkDetail = () => {
           </header>
 
           {/* Content */}
-          <div className="prose-literary">
-            {work.content.split('\n\n').map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
+          <div 
+            className="prose-literary"
+            dangerouslySetInnerHTML={{ 
+              __html: work.content
+                .split('\n\n')
+                .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br />')}</p>`)
+                .join('') 
+            }}
+          />
 
           {/* Footer */}
           <footer className="mt-16 border-t border-border pt-8">
