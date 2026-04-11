@@ -9,10 +9,10 @@ interface CategoryPageProps {
 }
 
 const categoryDescriptions: Record<Category, string> = {
-  poetry: 'Verses that capture moments of stillness, wonder, and the quiet revelations of everyday life.',
-  'short-stories': 'Brief narratives that illuminate the human condition through carefully crafted scenes and characters.',
-  prose: 'Essays and reflections on writing, solitude, and the practice of paying attention.',
-  novels: 'Longer works exploring the territories of memory, identity, and belonging.',
+  puisi: 'Kumpulan puisi yang merayakan keindahan bahasa dan emosi. Temukan karya-karya yang menyentuh hati dan menggugah imajinasi.',
+  cerpen: 'Kumpulan cerpen yang menghadirkan kisah-kisah menarik dan beragam. Dari cerita ringan hingga yang penuh makna, temukan semuanya di sini.',
+  prosa: 'Kumpulan prosa yang menampilkan gaya penulisan yang unik dan kreatif. Jelajahi karya-karya yang menggabungkan narasi dan ekspresi dengan indah.',
+  kutipan: 'Kumpulan kutipan inspiratif dan bermakna dari berbagai karya sastra. Temukan kata-kata bijak yang dapat memotivasi dan memberikan wawasan baru.',
 };
 
 export const CategoryPage = ({ category }: CategoryPageProps) => {

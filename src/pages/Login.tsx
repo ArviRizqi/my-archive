@@ -41,7 +41,7 @@ const Login = () => {
             Sign In
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Continue your literary journey
+            Lanjut Menjelajahi karya favoritmu.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ export const WorkSidebar = ({ category }: WorkSidebarProps) => {
     <aside className="sticky top-24 hidden h-fit w-64 shrink-0 lg:block">
       <div className="rounded-lg border border-border bg-card p-4">
         <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-primary">
-          More {categoryLabels[category]}
+          Lainnya {categoryLabels[category]}
         </h3>
         
         {isLoading ? (

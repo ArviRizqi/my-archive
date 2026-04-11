@@ -39,7 +39,7 @@ const WorkDetail = () => {
             className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft size={16} />
-            Back to {categoryLabels[work.category]}
+            Kembali {categoryLabels[work.category]}
           </Link>
 
           {/* Header */}
@@ -73,7 +73,7 @@ const WorkDetail = () => {
               className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
             >
               <ArrowLeft size={16} />
-              More {categoryLabels[work.category]}
+              Lainnya {categoryLabels[work.category]}
             </Link>
           </footer>
         </article>

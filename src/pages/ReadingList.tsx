@@ -64,7 +64,7 @@ const ReadingList = () => {
           <div className="mt-3">
             <Progress value={getProgress(work.id)} className="h-1.5" />
             <p className="mt-1 text-xs text-muted-foreground">
-              {getProgress(work.id)}% complete
+              {getProgress(work.id)}% selesai
             </p>
           </div>
         )}
@@ -88,10 +88,10 @@ const ReadingList = () => {
       <section className="mx-auto max-w-4xl px-6 py-16 md:py-20">
         <div className="animate-fade-in-up">
           <span className="text-xs font-medium uppercase tracking-widest text-primary">
-            Your Collection
+            Koleksi
           </span>
           <h1 className="mt-2 font-serif text-3xl font-semibold text-foreground md:text-4xl">
-            Reading List
+            List Bacaan
           </h1>
           <p className="mt-4 text-muted-foreground">
             Lacak kemajuan membaca Anda dan kelola favorit Anda
@@ -103,7 +103,7 @@ const ReadingList = () => {
           <div className="rounded-lg border border-border bg-card p-4 text-center">
             <Heart className="mx-auto h-5 w-5 text-primary" />
             <p className="mt-2 text-2xl font-semibold">{favorites.length}</p>
-            <p className="text-xs text-muted-foreground">Favorites</p>
+            <p className="text-xs text-muted-foreground">Favorit</p>
           </div>
           <div className="rounded-lg border border-border bg-card p-4 text-center">
             <BookOpen className="mx-auto h-5 w-5 text-primary" />
@@ -113,12 +113,12 @@ const ReadingList = () => {
           <div className="rounded-lg border border-border bg-card p-4 text-center">
             <Check className="mx-auto h-5 w-5 text-primary" />
             <p className="mt-2 text-2xl font-semibold">{completedWorks.length}</p>
-            <p className="text-xs text-muted-foreground">Completed</p>
+            <p className="text-xs text-muted-foreground">Selesai</p>
           </div>
           <div className="rounded-lg border border-border bg-card p-4 text-center">
             <Clock className="mx-auto h-5 w-5 text-primary" />
             <p className="mt-2 text-2xl font-semibold">{notStartedWorks.length}</p>
-            <p className="text-xs text-muted-foreground">Not Started</p>
+            <p className="text-xs text-muted-foreground">Belum Dimulai</p>
           </div>
         </div>
 
@@ -127,7 +127,7 @@ const ReadingList = () => {
           <TabsList className="mb-6 w-full justify-start">
             <TabsTrigger value="favorites" className="gap-2">
               <Heart className="h-4 w-4" />
-              Favorites ({favorites.length})
+              Favorit ({favorites.length})
             </TabsTrigger>
             <TabsTrigger value="in-progress" className="gap-2">
               <BookOpen className="h-4 w-4" />
@@ -135,7 +135,7 @@ const ReadingList = () => {
             </TabsTrigger>
             <TabsTrigger value="completed" className="gap-2">
               <Check className="h-4 w-4" />
-              Completed ({completedWorks.length})
+              Selesai ({completedWorks.length})
             </TabsTrigger>
           </TabsList>
 
@@ -148,7 +148,7 @@ const ReadingList = () => {
                 message="No favorites yet"
                 action={
                   <Link to="/archive" className="mt-4 inline-block text-primary hover:underline">
-                    Browse works
+                    Cari
                   </Link>
                 }
               />
@@ -164,7 +164,7 @@ const ReadingList = () => {
                 message="No works in progress"
                 action={
                   <Link to="/archive" className="mt-4 inline-block text-primary hover:underline">
-                    Start reading
+                    Mulai Membaca
                   </Link>
                 }
               />

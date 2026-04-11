@@ -16,7 +16,7 @@ export const FavoritesSidebar = () => {
         <div className="mb-4 flex items-center gap-2">
           <Heart size={14} className="text-primary" />
           <h3 className="text-xs font-medium uppercase tracking-widest text-primary">
-            Author's Favorites
+            Favorit
           </h3>
         </div>
         
@@ -46,7 +46,7 @@ export const FavoritesSidebar = () => {
         <div className="mb-4 flex items-center gap-2">
           <Clock size={14} className="text-primary" />
           <h3 className="text-xs font-medium uppercase tracking-widest text-primary">
-            Recently Added
+            Terbaru
           </h3>
         </div>
         
