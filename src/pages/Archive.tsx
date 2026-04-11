@@ -24,7 +24,7 @@ const Archive = () => {
       result = result.filter(
         work =>
           work.title.toLowerCase().includes(query) ||
-          work.excerpt.toLowerCase().includes(query) ||
+          (work.author && work.author.toLowerCase().includes(query)) ||
           work.content.toLowerCase().includes(query)
       );
     }
@@ -72,7 +72,7 @@ const Archive = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by title, excerpt, content, or genre..."
+              placeholder="Search by title, author, content, or genre..."
               className="pl-12 py-6 text-lg"
             />
           </div>

@@ -158,9 +158,11 @@ const Profile = () => {
                     className="rounded-lg border border-border bg-card p-4 transition-all hover:border-primary"
                   >
                     <h3 className="font-serif text-lg font-medium">{work.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
-                      {work.excerpt}
-                    </p>
+                    {work.author && (
+                      <p className="mt-1 text-sm italic text-muted-foreground line-clamp-2">
+                        by {work.author}
+                      </p>
+                    )}
                   </Link>
                 ))}
               </div>

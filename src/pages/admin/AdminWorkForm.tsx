@@ -36,10 +36,9 @@ const AdminWorkForm = () => {
 
   const [formData, setFormData] = useState({
     title: '',
-    slug: '',
+    author: '',
     category: 'poetry',
     genre: '',
-    excerpt: '',
     content: '',
     featured: false,
   });
@@ -64,10 +63,9 @@ const AdminWorkForm = () => {
     if (work) {
       setFormData({
         title: work.title,
-        slug: work.slug,
+        author: work.author || '',
         category: work.category,
         genre: work.genre,
-        excerpt: work.excerpt,
         content: work.content,
         featured: work.featured || false,
       });
@@ -112,13 +110,6 @@ const AdminWorkForm = () => {
     saveMutation.mutate(formData);
   };
 
-  const generateSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)/g, '');
-  };
-
   if (adminLoading || (isEditing && isLoading)) {
     return (
       <Layout>
@@ -154,27 +145,19 @@ const AdminWorkForm = () => {
               <Input
                 id="title"
                 value={formData.title}
-                onChange={(e) => {
-                  const title = e.target.value;
-                  setFormData({
-                    ...formData,
-                    title,
-                    slug: formData.slug || generateSlug(title),
-                  });
-                }}
+                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="Enter title"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="slug">Slug</Label>
+              <Label htmlFor="author">Author</Label>
               <Input
-                id="slug"
-                value={formData.slug}
-                onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                placeholder="url-friendly-slug"
-                required
+                id="author"
+                value={formData.author}
+                onChange={(e) => setFormData({ ...formData, author: e.target.value })}
+                placeholder="Enter author name"
               />
             </div>
           </div>
@@ -211,17 +194,7 @@ const AdminWorkForm = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="excerpt">Excerpt</Label>
-            <Textarea
-              id="excerpt"
-              value={formData.excerpt}
-              onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
-              placeholder="Brief description or opening line..."
-              rows={3}
-              required
-            />
-          </div>
+
 
           <div className="space-y-2">
             <Label htmlFor="content">Content</Label>

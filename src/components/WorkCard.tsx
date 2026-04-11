@@ -41,10 +41,10 @@ export const WorkCard = ({ work, showCategory = false, variant = 'vertical' }: W
             )}>
               {work.title}
             </h3>
-            <time className="mt-1 block text-sm text-muted-foreground">{formattedDate}</time>
-            {!isHorizontal && (
-              <p className="mt-4 font-serif text-base leading-relaxed text-literary">{work.excerpt}</p>
+            {work.author && (
+              <span className="mt-1 block text-sm italic text-muted-foreground">by {work.author}</span>
             )}
+            <time className="mt-1 block text-sm text-muted-foreground">{formattedDate}</time>
           </div>
           <div className={cn(
             "flex items-center gap-2 text-sm font-medium text-primary",

@@ -198,36 +198,33 @@ export type Database = {
           category: string
           content: string
           created_at: string
-          excerpt: string
           featured: boolean | null
           genre: string
           id: string
-          slug: string
           title: string
+          author: string | null
           updated_at: string
         }
         Insert: {
           category: string
           content: string
           created_at?: string
-          excerpt: string
           featured?: boolean | null
           genre: string
           id?: string
-          slug: string
           title: string
+          author?: string | null
           updated_at?: string
         }
         Update: {
           category?: string
           content?: string
           created_at?: string
-          excerpt?: string
           featured?: boolean | null
           genre?: string
           id?: string
-          slug?: string
           title?: string
+          author?: string | null
           updated_at?: string
         }
         Relationships: []

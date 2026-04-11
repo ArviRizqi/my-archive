@@ -57,7 +57,9 @@ const ReadingList = () => {
             <Check className="h-4 w-4 text-primary shrink-0" />
           )}
         </div>
-        <p className="mt-1 text-sm text-muted-foreground truncate">{work.excerpt}</p>
+        {work.author && (
+          <p className="mt-1 text-sm italic text-muted-foreground truncate">by {work.author}</p>
+        )}
         {showProgress && (
           <div className="mt-3">
             <Progress value={getProgress(work.id)} className="h-1.5" />

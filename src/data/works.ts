@@ -5,7 +5,7 @@ export interface Work {
   title: string;
   category: Category;
   genre: string;
-  excerpt: string;
+  author?: string;
   content: string;
   date: string;
   featured?: boolean;
@@ -17,7 +17,6 @@ export const works: Work[] = [
     title: 'The Quiet Hours',
     category: 'poetry',
     genre: 'Reflective',
-    excerpt: 'A meditation on the stillness between midnight and dawn...',
     content: `In the quiet hours when the world holds its breath,
 I find the words that daylight steals away.
 The moon keeps secrets better than the sun—
@@ -42,7 +41,6 @@ I am most myself, most truly home.`,
     title: 'Letters Never Sent',
     category: 'poetry',
     genre: 'Melancholic',
-    excerpt: 'On the words we carry but never speak...',
     content: `I keep them in a drawer that sticks,
 these letters I have written to the dead,
 to lovers lost, to versions of myself
@@ -70,7 +68,6 @@ delivered every night in dreams.`,
     title: 'The Glass House',
     category: 'short-stories',
     genre: 'Literary Fiction',
-    excerpt: 'She inherited the house from an aunt she never knew existed...',
     content: `She inherited the house from an aunt she never knew existed. The letter from the solicitor arrived on a Tuesday, unremarkable in every way except for its contents: a glass house on the Norfolk coast, and a woman named Esther who had watched the sea for sixty years alone.
 
 Clara drove north on a grey October morning, the kind of day that seemed designed for revelations. The house appeared through the mist like something imagined—walls of glass reflecting clouds, waves, and her own uncertain face.
@@ -90,7 +87,6 @@ When visitors asked why she'd stayed, Clara would gesture to the sea, the sky, t
     title: 'Morning Ritual',
     category: 'prose',
     genre: 'Personal Essay',
-    excerpt: 'On the sacred practice of beginning again...',
     content: `Every morning is a small death and resurrection.
 
 I wake before the sun, in that grey hour when night loosens its grip but day hasn't quite arrived. The coffee maker gurgles in the kitchen like an old friend clearing their throat. I've come to love this sound, this herald of consciousness.
@@ -111,7 +107,6 @@ Some mornings the ritual fails. The silence fills with worry, the coffee tastes 
     title: "The Cartographer's Daughter",
     category: 'novels',
     genre: 'Historical Fiction',
-    excerpt: 'A sweeping tale of maps, memory, and the territories of the heart...',
     content: `Chapter One: The Inheritance
 
 My father spent his life drawing lines on paper and calling them truth. As a child, I thought this was magic—the way he could conjure mountains from contour lines, rivers from blue threads, entire countries from careful measurements and patient ink.
@@ -139,7 +134,6 @@ This is not a map. This is the story of how I learned that some territories can 
     title: 'What the River Knows',
     category: 'poetry',
     genre: 'Nature',
-    excerpt: 'The river carries more than water...',
     content: `The river carries more than water—
 it holds the memory of mountains,
 the patience of stone slowly worn,
@@ -179,7 +173,6 @@ the writer and the written.`,
     title: 'The Last Bookshop',
     category: 'short-stories',
     genre: 'Contemporary',
-    excerpt: 'In a city of screens, one shop kept faith with paper...',
     content: `The sign said "Marginalia" in faded gold letters, and the shop itself seemed to exist slightly out of time—a pocket of stillness in the rushing city, a haven of paper in a world gone digital.
 
 Mr. Chen had run the bookshop for forty-seven years. He knew the location of every volume, could recommend a book based on nothing more than the way a customer stood, the worry in their eyes, the particular quality of their loneliness.
@@ -212,7 +205,6 @@ In the margins of the digital file, he began to type.`,
     title: 'On Solitude',
     category: 'prose',
     genre: 'Philosophical',
-    excerpt: 'The difference between loneliness and being alone...',
     content: `Solitude chose me before I chose it.
 
 I was a child who preferred corners to centers, who found crowds exhausting in ways I couldn't articulate. While other children clustered and competed, I drifted to the edges of rooms, of playgrounds, of conversations. Not unhappy, exactly—just elsewhere.
