@@ -61,7 +61,7 @@ export const CategoryPage = ({ category }: CategoryPageProps) => {
             ) : (
               <div className="rounded-lg border border-border bg-card p-12 text-center">
                 <p className="text-muted-foreground">
-                  No works in this category yet. Check back soon.
+                  Tidak ditemukan karya dalam kategori ini. Cobalah kategori lain atau kembali ke beranda untuk melihat karya terbaru.
                 </p>
               </div>
             )}

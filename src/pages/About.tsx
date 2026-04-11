@@ -17,36 +17,51 @@ const About = () => {
         {/* Bio */}
         <div className="prose-literary space-y-6">
           <p>
-            I've been writing for as long as I can remember—first in the margins of school 
-            notebooks, then in journals that grew increasingly dog-eared with use, and 
-            eventually on the pages of published books that still feel like dreams made 
-            tangible.
+            Saya telah menulis selama yang saya ingat—pertama di pinggiran buku catatan sekolah, 
+            lalu di jurnal-jurnal yang semakin lusuh karena sering digunakan, dan 
+            akhirnya di halaman-halaman buku yang diterbitkan yang masih terasa seperti 
+            mimpi yang menjadi nyata.
           </p>
 
           <p>
-            My work explores the quiet territories of human experience: solitude and 
-            connection, memory and forgetting, the way light falls through windows in 
-            late afternoon, the conversations we have with ourselves when no one is 
-            listening.
+            Karya-karya saya menjelajahi wilayah sunyi dari pengalaman manusia: kesendirian dan 
+            hubungan, ingatan dan kelupaan, cara cahaya jatuh menembus jendela di 
+            sore hari, percakapan yang kita lakukan dengan diri sendiri saat tidak ada 
+            yang mendengarkan.
           </p>
 
           <p>
-            I believe in the power of slowness. In a world that moves ever faster, I'm 
-            drawn to the deliberate pace of careful sentences, the patience required to 
-            find exactly the right word. Writing, for me, is a practice of attention—a 
-            way of being present in the world more fully than I otherwise might be.
+            Saya percaya pada kekuatan kelambanan. Di dunia yang bergerak semakin cepat, saya 
+            tertarik pada langkah yang disengaja dari kalimat-kalimat yang hati-hati, 
+            kesabaran yang diperlukan untuk menemukan kata yang tepat. Menulis, bagi saya, 
+            adalah sebuah latihan perhatian—cara untuk hadir di dunia secara lebih utuh 
+            daripada yang mungkin saya lakukan.
           </p>
 
           <p>
-            I live in a small house near the sea, where the sound of waves serves as both 
-            companion and metronome. When not writing, I walk, read, and tend a garden 
-            that teaches me as much about patience as any book ever could.
+            Saya tinggal di sebuah rumah yang berdiri di tepi antara yang diketahui 
+            dan yang tidak—di mana laut bukan sekadar pemandangan, melainkan pengingat abadi 
+            bahwa ada kedalaman yang tidak pernah sepenuhnya bisa kita ukur.
           </p>
 
           <p>
-            This archive represents two decades of work—some published, some shared here 
-            for the first time. I hope you find something in these pages that resonates, 
-            that lingers, that makes you pause and pay attention to your own quiet moments.
+            Suara ombak yang berulang itu bukan sekadar metronom—ia adalah pertanyaan yang sama 
+            yang diajukan berkali-kali oleh semesta kepada siapa pun yang mau mendengar: 
+            apakah kamu benar-benar ada, ataukah kamu hanya pola yang percaya bahwa dirinya hidup?
+          </p>
+
+          <p>
+            Saat tidak menulis, saya berjalan di tepi air saat fajar—jam ketika batas antara 
+            malam dan siang masih bisa diperdebatkan, ketika bayangan belum memutuskan akan 
+            jatuh ke arah mana. Saya merawat taman yang diam-diam mengajari saya bahwa 
+            sesuatu harus membusuk terlebih dahulu sebelum bisa tumbuh.
+          </p>
+
+          <p>
+            Arsip ini bukan sekadar kumpulan kata—ia adalah peta dari wilayah yang tidak pernah 
+            saya kunjungi secara fisik, namun selalu saya huni. Dua dekade upaya untuk menamai 
+            apa yang tidak punya nama. Saya harap di antara halaman-halaman ini, Anda menemukan 
+            bukan jawaban, melainkan pertanyaan yang lebih indah dari yang sebelumnya Anda miliki.
           </p>
         </div>
 
@@ -58,27 +73,30 @@ const About = () => {
           
           <div className="prose-literary mt-6 space-y-6">
             <p>
-              I write to understand what I think. The act of putting words on paper is, 
-              for me, an act of discovery—I rarely know what I truly feel about something 
-              until I've tried to write about it.
+              Saya menulis untuk memahami apa yang saya pikirkan. Tindakan menuangkan 
+              kata-kata ke atas kertas, bagi saya, adalah sebuah tindakan penemuan—saya 
+              jarang tahu apa yang sebenarnya saya rasakan tentang sesuatu sampai saya 
+              mencoba menulis tentangnya.
             </p>
 
             <p>
-              My process is simple: I show up. Every day, at the same hour, I sit down 
-              with my coffee and my notebook and I wait. Sometimes the words come easily; 
-              often they don't. But the practice of showing up, of making myself available 
-              to whatever might arrive, is the essential thing.
+              Proses saya sederhana: saya hadir. Setiap hari, pada jam yang sama, saya 
+              duduk dengan kopi dan buku catatan saya dan saya menunggu. Terkadang 
+              kata-kata datang dengan mudah; seringkali tidak. Namun praktik untuk 
+              hadir, untuk menyediakan diri bagi apa pun yang mungkin datang, adalah 
+              hal yang esensial.
             </p>
 
             <blockquote className="my-8 border-l-2 border-primary pl-6 italic">
-              "The blank page is not empty—it's full of possibility. Our work is simply 
-              to discover which possibilities want to be made real."
+              "Halaman kosong itu tidak kosong—ia penuh dengan kemungkinan. Tugas kita 
+              hanyalah untuk menemukan kemungkinan mana yang ingin diwujudkan."
             </blockquote>
 
             <p>
-              I'm drawn to writers who take their time: Marilynne Robinson, W.G. Sebald, 
-              Mary Oliver. Writers for whom every word matters, every silence is intentional. 
-              This is the tradition I aspire to, even when I fall short.
+              Saya tertarik pada penulis yang meluangkan waktu mereka: Marilynne Robinson, 
+              W.G. Sebald, Mary Oliver. Penulis di mana setiap kata berarti, setiap 
+              keheningan disengaja. Inilah tradisi yang saya cita-citakan, bahkan ketika 
+              saya merasa kurang.
             </p>
           </div>
         </section>
@@ -89,8 +107,8 @@ const About = () => {
             Get in Touch
           </h2>
           <p className="mt-4 font-serif text-literary">
-            For inquiries about readings, publications, or simply to share your thoughts, 
-            you're welcome to reach me at{' '}
+            Untuk pertanyaan tentang pembacaan, publikasi, atau sekadar berbagi pemikiran Anda, 
+            Anda dipersilakan untuk menghubungi saya di{' '}
             <a 
               href="mailto:hello@eleanorvance.com" 
               className="text-primary underline underline-offset-4 transition-colors hover:text-primary/80"

@@ -44,7 +44,7 @@ const Archive = () => {
     return result;
   }, [works, searchQuery, selectedCategory, sortBy]);
 
-  const categories: (Category | 'all')[] = ['all', 'poetry', 'short-stories', 'prose', 'novels'];
+  const categories: (Category | 'all')[] = ['all', 'puisi', 'cerpen', 'prosa', 'kutipan'];
 
   return (
     <Layout>
@@ -52,14 +52,14 @@ const Archive = () => {
         {/* Header */}
         <div className="animate-fade-in-up">
           <span className="text-xs font-medium uppercase tracking-widest text-primary">
-            Complete Collection
+            Collection
           </span>
           <h1 className="mt-2 font-serif text-3xl font-semibold text-foreground md:text-4xl lg:text-5xl">
             Archive
           </h1>
           <p className="mt-6 max-w-2xl font-serif text-lg leading-relaxed text-literary">
-            Browse the complete collection of works. Use the search and filters to find 
-            exactly what you're looking for.
+            Jelajahi koleksi lengkap karya kami. Gunakan pencarian dan filter untuk 
+            menemukan apa yang Anda cari.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ const Archive = () => {
 
         <div className="mt-8">
           <p className="mb-6 text-sm text-muted-foreground">
-            Showing {filteredWorks.length} of {works.length} works
+            Menampilkan {filteredWorks.length} dari {works.length} karya
           </p>
 
           {isLoading ? (
@@ -164,7 +164,7 @@ const Archive = () => {
           ) : (
             <div className="rounded-lg border border-border bg-card p-12 text-center">
               <Search className="mx-auto h-12 w-12 text-muted-foreground/50" />
-              <p className="mt-4 text-muted-foreground">No works found matching your criteria</p>
+              <p className="mt-4 text-muted-foreground">Tidak ditemukan project yang sesuai dengan kriteria Anda</p>
               <Button
                 variant="outline"
                 className="mt-4"

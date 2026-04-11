@@ -14,14 +14,14 @@ const Index = () => {
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
         <div className="max-w-3xl">
           <h1 className="animate-fade-in-up font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Words that linger
-            <span className="block text-primary">after the page turns</span>
+            Sisa-sisa makna yang tak ikut pergi 
+            <span className="block text-primary">saat waktu membalik kisah</span>
           </h1>
           
           <p className="mt-8 animate-fade-in-up font-serif text-lg leading-relaxed text-literary delay-100 md:text-xl">
-            Welcome to my literary archive—a collection of poetry, short stories, prose, 
-            and novels written over two decades of listening to the world and trying 
-            to translate its whispers into words.
+            Selamat datang di arsip saya—kumpulan puisi, cerita pendek, prosa, dan kutipan 
+            yang ditulis selama dua dekade mendengarkan dunia dan mencoba 
+            menerjemahkan bisikannya ke dalam kata-kata.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up delay-200">
@@ -29,7 +29,7 @@ const Index = () => {
               to="/poetry"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
             >
-              Explore Poetry
+              Explore Puisi
               <ArrowRight size={16} />
             </Link>
             <Link
@@ -58,7 +58,7 @@ const Index = () => {
                   Featured
                 </span>
                 <h2 className="mt-2 font-serif text-2xl font-semibold text-foreground md:text-3xl">
-                  New Works
+                  Latest
                 </h2>
               </div>
             </div>

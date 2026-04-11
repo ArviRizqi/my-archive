@@ -48,9 +48,9 @@ const Contact = () => {
               Contact Me
             </h1>
             <p className="mt-6 font-serif text-lg leading-relaxed text-literary">
-              I'd love to hear from you. Whether you have a question about my work, 
-              an invitation to speak, or simply want to share your thoughts on something 
-              you've read, please don't hesitate to reach out.
+              Saya akan senang mendengar dari Anda. Baik Anda memiliki pertanyaan tentang karya saya, 
+              undangan untuk berbicara, atau sekadar ingin berbagi pemikiran Anda tentang sesuatu 
+              yang telah Anda baca, jangan ragu untuk menghubungi saya.
             </p>
 
             <div className="mt-10 space-y-6">

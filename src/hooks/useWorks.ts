@@ -2,13 +2,13 @@ import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { Database } from '@/integrations/supabase/types';
 
-export type Category = 'poetry' | 'short-stories' | 'prose' | 'novels';
+export type Category = 'puisi' | 'cerpen' | 'prosa' | 'kutipan';
 
 export const categoryLabels: Record<Category, string> = {
-  'poetry': 'Poetry',
-  'short-stories': 'Short Stories',
-  'prose': 'Prose',
-  'novels': 'Novels',
+  'puisi': 'Puisi',
+  'cerpen': 'Cerpen',
+  'prosa': 'Prosa',
+  'kutipan': 'Kutipan',
 };
 
 export type Work = Database['public']['Tables']['works']['Row'];

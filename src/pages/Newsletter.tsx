@@ -44,7 +44,7 @@ const Newsletter = () => {
               You're In!
             </h1>
             <p className="mt-4 font-serif text-lg text-literary">
-              Thank you for subscribing. You'll receive my next letter soon.
+              Terima kasih telah bergabung dengan newsletter. Nantikan karya-karya baru dan cerita di balik layar yang akan datang setiap bulan!
             </p>
           </div>
         ) : (
@@ -57,8 +57,8 @@ const Newsletter = () => {
                 Subscribe to My Newsletter
               </h1>
               <p className="mx-auto mt-6 max-w-xl font-serif text-lg leading-relaxed text-literary">
-                Receive monthly letters with new works, behind-the-scenes glimpses into my 
-                writing process, reading recommendations, and reflections on the craft.
+                Terima email bulanan dengan karya-karya terbaru, cerita di balik layar. 
+                Tidak ada spam, hanya kata-kata yang bermakna.
               </p>
             </div>
 
@@ -70,17 +70,7 @@ const Newsletter = () => {
                 </div>
                 <h3 className="mt-4 font-medium text-foreground">New Works</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Be the first to read new poetry and prose
-                </p>
-              </div>
-              
-              <div className="rounded-lg border border-border bg-card p-6 text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                  <Sparkles className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="mt-4 font-medium text-foreground">Exclusive Content</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Writing tips and creative insights
+                  Jadi yang pertama tahu tentang karya-karya baru saya
                 </p>
               </div>
               
@@ -90,7 +80,7 @@ const Newsletter = () => {
                 </div>
                 <h3 className="mt-4 font-medium text-foreground">Monthly Updates</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  No spam, just meaningful content
+                  Tidak ada spam, hanya pembaruan bulanan tentang apa yang sedang saya kerjakan
                 </p>
               </div>
             </div>
@@ -121,7 +111,7 @@ const Newsletter = () => {
                 </Button>
               </div>
               <p className="mt-4 text-center text-sm text-muted-foreground">
-                I respect your privacy. Unsubscribe at any time.
+                Saya menghargai rahasia anda. Unsubscribe kapan saja.
               </p>
             </form>
           </>

@@ -94,7 +94,7 @@ const ReadingList = () => {
             Reading List
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Track your reading progress and manage your favorites
+            Lacak kemajuan membaca Anda dan kelola favorit Anda
           </p>
         </div>
 

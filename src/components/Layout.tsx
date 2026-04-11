@@ -28,7 +28,7 @@ export const Layout = ({ children }: LayoutProps) => {
               className="flex items-center gap-3 font-serif text-2xl font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
             >
               <img src="/folders.png" alt="Logo" className="w-8 h-8 object-contain" />
-              Eleanor Vance
+              Tsemicolon
             </Link>
 
             <div className="hidden items-center gap-4 md:flex">
@@ -93,7 +93,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <footer className="mt-24 border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="font-serif text-lg text-foreground">Eleanor Vance</p>
+            <p className="font-serif text-lg text-foreground">Tsemicolon</p>
             <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} All rights reserved</p>
           </div>
         </div>
