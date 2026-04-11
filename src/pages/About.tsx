@@ -110,10 +110,10 @@ const About = () => {
             Untuk pertanyaan tentang pembacaan, publikasi, atau sekadar berbagi pemikiran Anda, 
             Anda dipersilakan untuk menghubungi saya di{' '}
             <a 
-              href="mailto:hello@eleanorvance.com" 
+              href="mailto:artzz4816@gmail.com" 
               className="text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
             >
-              hello@eleanorvance.com
+              artzz4816@gmail.com
             </a>
           </p>
         </section>
