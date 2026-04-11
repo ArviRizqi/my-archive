@@ -68,7 +68,7 @@ const About = () => {
         {/* Writing Philosophy Section */}
         <section className="mt-16 border-t border-border pt-12">
           <h2 className="font-serif text-2xl font-semibold text-foreground md:text-3xl">
-            On Writing
+            Yang Saya Lakukan
           </h2>
           
           <div className="prose-literary mt-6 space-y-6">
