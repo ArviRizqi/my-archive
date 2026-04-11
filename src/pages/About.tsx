@@ -92,12 +92,6 @@ const About = () => {
               hanyalah untuk menemukan kemungkinan mana yang ingin diwujudkan."
             </blockquote>
 
-            <p>
-              Saya tertarik pada penulis yang meluangkan waktu mereka: Marilynne Robinson, 
-              W.G. Sebald, Mary Oliver. Penulis di mana setiap kata berarti, setiap 
-              keheningan disengaja. Inilah tradisi yang saya cita-citakan, bahkan ketika 
-              saya merasa kurang.
-            </p>
           </div>
         </section>
 
