@@ -20,10 +20,10 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useToast } from '@/hooks/use-toast';
 
 const categories = [
-  { value: 'Puisi', label: 'Puisi' },
-  { value: 'Cerpen', label: 'Cerpen' },
-  { value: 'Prosa', label: 'Prosa' },
-  { value: 'Kutipan', label: 'Kutipan' },
+  { value: 'puisi', label: 'Puisi' },
+  { value: 'cerpen', label: 'Cerpen' },
+  { value: 'prosa', label: 'Prosa' },
+  { value: 'kutipan', label: 'Kutipan' },
 ];
 
 const AdminWorkForm = () => {
