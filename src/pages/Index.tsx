@@ -58,7 +58,7 @@ const Index = () => {
                   Featured
                 </span>
                 <h2 className="mt-2 font-serif text-2xl font-semibold text-foreground md:text-3xl">
-                  Latest
+                  Terbaru
                 </h2>
               </div>
             </div>

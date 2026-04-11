@@ -32,10 +32,10 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/poetry" element={<CategoryPage category="poetry" />} />
-              <Route path="/short-stories" element={<CategoryPage category="short-stories" />} />
-              <Route path="/prose" element={<CategoryPage category="prose" />} />
-              <Route path="/novels" element={<CategoryPage category="novels" />} />
+              <Route path="/puisi" element={<CategoryPage category="puisi" />} />
+              <Route path="/cerpen" element={<CategoryPage category="cerpen" />} />
+              <Route path="/prosa" element={<CategoryPage category="prosa" />} />
+              <Route path="/kutipan" element={<CategoryPage category="kutipan" />} />
               <Route path="/about" element={<About />} />
               <Route path="/work/:id" element={<WorkDetail />} />
               <Route path="/contact" element={<Contact />} />
