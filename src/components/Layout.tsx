@@ -25,8 +25,9 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center justify-between">
             <Link 
               to="/" 
-              className="font-serif text-2xl font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
+              className="flex items-center gap-3 font-serif text-2xl font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
             >
+              <img src="/folders.png" alt="Logo" className="w-8 h-8 object-contain" />
               Eleanor Vance
             </Link>
 
