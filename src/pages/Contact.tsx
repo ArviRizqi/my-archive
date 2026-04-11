@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">Response Time</h3>
-                  <p className="text-muted-foreground">Usually within 48 hours</p>
+                  <p className="text-muted-foreground">Saya biasanya merespons dalam waktu 48 jam.</p>
                 </div>
               </div>
             </div>
