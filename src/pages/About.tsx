@@ -10,7 +10,7 @@ const About = () => {
             About
           </span>
           <h1 className="mt-2 font-serif text-3xl font-semibold text-foreground md:text-4xl lg:text-5xl">
-            The Writer
+            Penulis
           </h1>
         </header>
 
