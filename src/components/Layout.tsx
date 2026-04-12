@@ -37,7 +37,7 @@ export const Layout = ({ children }: LayoutProps) => {
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className={`link-literary text-sm font-medium tracking-wide transition-colors ${
+                      className={`link-literary text-md font-medium tracking-wide transition-colors ${
                         location.pathname === link.path
                           ? 'text-primary'
                           : 'text-muted-foreground hover:text-foreground'

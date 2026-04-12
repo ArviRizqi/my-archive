@@ -14,14 +14,15 @@ const Index = () => {
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
         <div className="max-w-3xl">
           <h1 className="animate-fade-in-up font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Sisa-sisa makna yang tak ikut pergi 
+            Sisa makna <br />
+            yang tak ikut pergi 
             <span className="block text-primary">saat waktu membalik kisah</span>
           </h1>
           
           <p className="mt-8 animate-fade-in-up font-serif text-lg leading-relaxed text-literary delay-100 md:text-xl">
-            Selamat datang di arsip saya—kumpulan puisi, cerita pendek, prosa, dan kutipan 
-            yang ditulis selama dua dekade mendengarkan dunia dan mencoba 
-            menerjemahkan bisikannya ke dalam kata-kata.
+            Selamat datang di arsip saya—kumpulan puisi, cerita pendek, prosa, dan kutipan <br />
+            yang ditulis selama dua dekade mendengarkan dunia dan mencoba menerjemahkan <br /> 
+            bisikannya ke dalam kata-kata.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up delay-200">
