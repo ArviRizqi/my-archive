@@ -24,6 +24,7 @@ const categories = [
   { value: 'cerpen', label: 'Cerpen' },
   { value: 'prosa', label: 'Prosa' },
   { value: 'kutipan', label: 'Kutipan' },
+  { value: 'other', label: 'Lainnya' },
 ];
 
 const AdminWorkForm = () => {
@@ -74,14 +75,16 @@ const AdminWorkForm = () => {
 
   const saveMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
-      if (isEditing) {
+    if (isEditing) {
         const { error } = await supabase
           .from('works')
-          .update(data)
+          .update({ ...data, updated_at: new Date().toISOString() })
           .eq('id', id);
         if (error) throw error;
       } else {
-        const { error } = await supabase.from('works').insert([data]);
+        const { error } = await supabase
+          .from('works')
+          .insert([{ ...data, created_at: new Date().toISOString() }]);
         if (error) throw error;
       }
     },
